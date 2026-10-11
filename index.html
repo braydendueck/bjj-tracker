@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://api.github.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#111418">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BJJ">
+<title>BJJ Tracker</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+ <div class="toprow">
+  <div class="brand" id="brand">BJJ Tracker</div>
+  <div class="topr">
+    <span id="syncstate" class="syncstate" aria-live="polite"></span>
+    <button id="btnRefresh" class="iconbtn" aria-label="Refresh" title="Refresh">&#x21bb;</button>
+    <button id="btnSettings" class="iconbtn" aria-label="Settings" title="Settings">&#x2699;</button>
+  </div>
+ </div>
+ <div id="banner" class="banner" hidden></div>
+</header>
+<main id="main"></main>
+<nav id="nav" class="nav" hidden>
+  <button data-tab="log" class="on"><span class="ico">&#x1F4C5;</span>Log</button>
+  <button data-tab="goals"><span class="ico">&#x1F3AF;</span>Goals</button>
+  <button data-tab="moves"><span class="ico">&#x1F94B;</span>Moves</button>
+  <button data-tab="journey"><span class="ico">&#x2705;</span>90 days</button>
+</nav>
+<div id="sheet" class="sheetwrap" hidden></div>
+<div id="toast" class="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
